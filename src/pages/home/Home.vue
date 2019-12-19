@@ -1,9 +1,9 @@
 <template>
 <div>
-  <router-link to="/helloworld" class="home">helloworld</router-link>
+  <router-link to="/detail" class="home">detail</router-link>
   
   <el-button @click="handleClick">AAA</el-button>
-  <home-header></home-header>
+  <home-header :city="city"></home-header>
 </div>
 
 </template>
@@ -17,15 +17,32 @@ export default {
   components:{
     HomeHeader
   },
+  data(){
+    return {
+      city:''
+    }
+  },
   methods:{
     handleClick(){
        console.log('element test')
     },
     getHomeInfo(){
-      
+      //axios.get('static/mock/index.json')
+
+       axios.get('/api/index.json')
+        .then(this.getHomeInfoSucc)
+    },
+    getHomeInfoSucc(res){
+      res=res.data
+      if(res.ret && res.data) {
+        const data=res.data
+        this.city=data.city
+      }
+
+      console.log(res)
     }
   },
-  mounted:{
+  mounted(){
     this.getHomeInfo()
   }
 }

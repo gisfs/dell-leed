@@ -1,7 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import HelloWorld from "@/components/HelloWorld"
+
 import Home from "@/pages/home/Home"
+import Detail from "@/pages/detail/Detail"
 
 Vue.use(VueRouter);
 
@@ -12,9 +13,9 @@ const routes = [
     component: Home
   },
   {
-    path: "/helloworld",
-    name: "HelloWorld",
-    component: HelloWorld
+    path: "/detail",
+    name: "Detail",
+    component: Detail
   }
   // {
   //   path: "/about",

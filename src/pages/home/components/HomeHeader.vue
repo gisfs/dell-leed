@@ -1,7 +1,7 @@
 <template>
 <div>
   <div >
-    this is HomeHeader
+    HomeHeader {{this.city}}
   </div>
 </div>
 
@@ -9,7 +9,14 @@
 
 <script>
 export default {
-  name:'HomeHeader'
+  name:'HomeHeader',
+  props:{
+    city:String,
+    age: {
+      type: Number,
+      default: 0
+    }
+  }
 }
 </script>
 
@@ -17,3 +24,4 @@ export default {
 <style >
 
 </style>
+
