@@ -1,16 +1,19 @@
 <template>
-  <div id="app">
-    <router-view />
+<div>
+  <div >
+    this is HomeHeader
   </div>
+</div>
+
 </template>
 
 <script>
-
 export default {
-  name: "app"
-};
+  name:'HomeHeader'
+}
 </script>
 
-<style lang="scss">
+
+<style >
 
 </style>
