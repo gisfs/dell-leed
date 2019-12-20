@@ -38,11 +38,11 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
-      "@vue/prettier"
+      "plugin:vue/essential"
     ],
     "rules": {
-      "no-console": "off"
+      "no-console": "off",
+      "no-unused-vars": 0
     },
     "parserOptions": {
       "parser": "babel-eslint"
