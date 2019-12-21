@@ -1,29 +1,23 @@
 <template>
-<div>
-  <div >
-    HomeHeader {{this.city}}
+  <div>
+    <div>{{city}}</div>
   </div>
-</div>
-
 </template>
+
 
 <script>
 export default {
-  name:'HomeHeader',
-  props:{
-    city:String,
+  name: "HomeHeader",
+  props: {
+    city: {
+      type: String,
+      default: ""
+    },
     age: {
       type: Number,
       default: 0
     }
   }
-}
+};
 </script>
-
-
-<style >
-
-</style>
-
-
-
+<style lang="scss" scoped></style>;

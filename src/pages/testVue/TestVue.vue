@@ -60,7 +60,7 @@
 
 <script>
 export default {
-  name: "HomeTest",
+  name: "TestVue",
   data() {
     return {
       dialogVisible: false,

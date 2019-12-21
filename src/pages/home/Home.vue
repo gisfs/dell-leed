@@ -1,59 +1,97 @@
 <template>
-<div>
-  <router-link to="/detail" class="home">detail</router-link>
-  
-  <el-button @click="handleClick">AAA</el-button>
-  <home-header :city="city"></home-header>
-</div>
+  <!-- <router-link to="/detail" class="home">detail</router-link>  
+    <el-button @click="handleClick">AAA</el-button>
+  -->
 
+  <el-container style="height: 100%">
+    <el-aside width="200px">
+      <home-aside></home-aside>
+    </el-aside>
+    <el-container>
+      <el-header>
+        <home-header :city="city"></home-header>
+        <div>AAA</div>
+      </el-header>
+      <el-main>Main</el-main>
+    </el-container>
+  </el-container>
 </template>
 
 <script>
-import HomeHeader from './components/HomeHeader'
-import axios from 'axios'
+import HomeHeader from "./components/HomeHeader";
+import HomeAside from "./components/HomeAside";
+import axios from "axios";
 
 export default {
-  name:'Home',
-  components:{
-    HomeHeader
+  name: "Home",
+  components: {
+    HomeHeader,
+    HomeAside
   },
-  data(){
+  data() {
     return {
-      city:''
-    }
+      city: ""
+    };
   },
-  methods:{
-    handleClick(){
-       console.log('element test')
+  methods: {
+    handleClick() {
+      console.log("element test");
     },
-    getHomeInfo(){
-      //axios.get('static/mock/index.json')
-
-       axios.get('/api/index.json')
-        .then(this.getHomeInfoSucc)
+    getHomeInfo() {
+      axios.get("/api/index.json").then(this.getHomeInfoSucc);
     },
-    getHomeInfoSucc(res){
-      res=res.data
-      if(res.ret && res.data) {
-        const data=res.data
-        this.city=data.city
+    getHomeInfoSucc(res) {
+      res = res.data;
+      if (res.ret && res.data) {
+        const data = res.data;
+        this.city = data.city;
       }
 
-      console.log(res)
+      console.log(res);
     }
   },
-  mounted(){
-    this.getHomeInfo()
+  mounted() {
+    this.getHomeInfo();
   }
-}
+};
 </script>
 
 
 <style >
-  .home{
-    font-size: 50px
-  }
-  
+.el-header,
+.el-footer {
+  background-color: #b3c0d1;
+  color: #333;
+  text-align: center;
+  line-height: 60px;
+}
+
+.el-aside {
+  background-color: #d3dce6;
+  color: #333;
+  text-align: center;
+  line-height: 200px;
+}
+
+.el-main {
+  background-color: #e9eef3;
+  color: #333;
+  text-align: center;
+  line-height: 160px;
+}
+
+body > .el-container {
+  margin-bottom: 40px;
+}
+
+.el-container:nth-child(5) .el-aside,
+.el-container:nth-child(6) .el-aside {
+  line-height: 260px;
+}
+
+.el-container:nth-child(7) .el-aside {
+  line-height: 320px;
+}
 </style>
 
 

@@ -1,6 +1,5 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-
 import Home from "@/pages/home/Home";
 import Detail from "@/pages/detail/Detail";
 
@@ -11,7 +10,6 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home
-    // redirect: "/"
   },
   {
     path: "/detail",
@@ -19,9 +17,9 @@ const routes = [
     component: Detail
   },
   {
-    path: "/hometest",
-    name: "HomeTest",
-    component: () => import("@/pages/home/HomeTest")
+    path: "/testvue",
+    name: "TestVue",
+    component: () => import("@/pages/testVue/TestVue")
   }
   // {
   //   path: "/about",
