@@ -53,6 +53,7 @@ export default {
   .home{
     font-size: 50px
   }
+  
 </style>
 
 
