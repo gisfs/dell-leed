@@ -94,5 +94,6 @@ export default {
 <style lang='scss' scoped>
 .el-menu {
   height: 100%;
+  border:none;
 }
 </style>
