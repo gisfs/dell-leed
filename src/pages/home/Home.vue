@@ -1,8 +1,6 @@
 <template>
   <!-- <router-link to="/detail" class="home">detail</router-link>  
     <el-button @click="handleClick">AAA</el-button>
-
-        style="height:100%"
   -->
 
   <el-container style="height: 100%">
@@ -59,7 +57,7 @@ export default {
 </script>
 
 
-<style >
+<style  lang="scss" >
 .el-header,
 .el-footer {
   background-color: #b3c0d1;
