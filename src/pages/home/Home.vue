@@ -8,9 +8,8 @@
       <home-aside></home-aside>
     </el-aside>
     <el-container>
-      <el-header>
-        <home-header :city="city"></home-header>
-        <div>AAA</div>
+      <el-header height="60px">
+        <home-header  :city="city"></home-header>
       </el-header>
       <el-main>Main</el-main>
     </el-container>
@@ -61,9 +60,7 @@ export default {
 .el-header,
 .el-footer {
   background-color: #b3c0d1;
-  color: #333;
-  text-align: center;
-  line-height: 60px;
+  text-align: left;
 }
 
 .el-aside {
