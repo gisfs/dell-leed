@@ -1,6 +1,8 @@
 <template>
   <!-- <router-link to="/detail" class="home">detail</router-link>  
     <el-button @click="handleClick">AAA</el-button>
+
+        style="height:100%"
   -->
 
   <el-container style="height: 100%">
@@ -69,7 +71,7 @@ export default {
 .el-aside {
   background-color: #d3dce6;
   color: #333;
-  text-align: center;
+  text-align: left;
   line-height: 200px;
 }
 
