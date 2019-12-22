@@ -2,18 +2,20 @@
   <div class="content">
     <div class="l-content">
       <el-button type="primary" icon="el-icon-menu" size="mini"></el-button>
+      <el-breadcrumb class="bread" separator-class="el-icon-arrow-right" >
+        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+        <el-breadcrumb-item ><a href="/">活动管理</a></el-breadcrumb-item>
+      </el-breadcrumb>
     </div>
 
     <div class="r-content">
       <el-dropdown trigger="click">
-        <span class="el-dropdown-link"><img :src="userImg"/>
+        <span class="el-dropdown-link">
+          <img class="userImage" :src="userImage" />
         </span>
         <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item icon="el-icon-plus">黄金糕</el-dropdown-item>
-          <el-dropdown-item icon="el-icon-circle-plus">狮子头</el-dropdown-item>
-          <el-dropdown-item icon="el-icon-circle-plus-outline">螺蛳粉</el-dropdown-item>
-          <el-dropdown-item icon="el-icon-check">双皮奶</el-dropdown-item>
-          <el-dropdown-item icon="el-icon-circle-check">蚵仔煎</el-dropdown-item>
+          <el-dropdown-item>个人中心</el-dropdown-item>
+          <el-dropdown-item>退出</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
     </div>
@@ -36,8 +38,8 @@ export default {
   },
   data() {
     return {
-      userImg: require('@/assets/images/user.png')
-    }
+      userImage: require("@/assets/image/user.png")
+    };
   }
 };
 </script>
@@ -51,5 +53,21 @@ export default {
 .el-dropdown-link {
   cursor: pointer;
   color: #409eff;
+}
+.l-content {
+  // width: 400px;
+  display: flex;
+  align-items: center;
+  // justify-content: space-between;
+}
+.r-content {
+  .userImage {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+}
+.bread{
+  margin-left: 20px;
 }
 </style>

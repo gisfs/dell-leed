@@ -59,7 +59,7 @@ export default {
 <style  lang="scss" >
 .el-header,
 .el-footer {
-  background-color: #b3c0d1;
+  background-color: #ffffff;
   text-align: left;
 }
 
