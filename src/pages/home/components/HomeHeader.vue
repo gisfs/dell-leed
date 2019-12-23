@@ -2,7 +2,7 @@
   <div class="content">
     <div class="l-content">
       <el-button type="primary" icon="el-icon-menu" size="mini"></el-button>
-      <div class="select">{{this.$store.state.menuSelect}}</div>
+      <div class="select">{{this.$store.state.menu}}</div>
       <el-breadcrumb class="bread" separator-class="el-icon-arrow-right">
         <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
         <el-breadcrumb-item>
@@ -23,7 +23,6 @@
     </div>
   </div>
 </template>
-    // <div class="l-content">lll</div>
 
 <script>
 export default {
@@ -51,13 +50,14 @@ export default {
   height: 100%;
   align-items: center;
   justify-content: space-between;
+  background-color: #ffffff;
 }
 .el-dropdown-link {
   cursor: pointer;
   color: #409eff;
 }
 .select{
-  margin-left:20px;
+  margin-left:0px;
 }
 .l-content {
   // width: 400px;

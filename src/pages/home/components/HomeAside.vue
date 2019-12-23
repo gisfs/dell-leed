@@ -10,18 +10,19 @@
   >
     <div v-for="item in asideMenu" :key="item.path">
       <div v-if="!item.child">
-        <el-menu-item :index="item.path">
+        <el-menu-item :index="item.path" @click="clickMenu(item)">
           <i :class="item.icon"></i>
           <span slot="title">{{item.name}}</span>
         </el-menu-item>
       </div>
       <div v-else>
-        <el-submenu index="1">
+        <el-submenu index="folder">
           <template slot="title">
             <i class="el-icon-location"></i>
             <span>{{item.name}}</span>
           </template>
           <el-menu-item
+            @click="clickMenu(subItem)"
             :index="subItem.path"
             v-for="subItem in item.child"
             :key="subItem.path"
@@ -78,6 +79,13 @@ export default {
     },
     handleClose(key, keyPath) {
       console.log(key, keyPath);
+    },
+    clickMenu(item) {
+      this.$store.commit("changeMenu", item.name);
+
+      // this.$store.dispatch('changeMenu',name)//异步
+      // this.$store.commit("changeMenu", name); //同步
+      // this.$router.push(item.path)
     }
   },
   computed: {
@@ -94,6 +102,5 @@ export default {
 <style lang='scss' scoped>
 .el-menu {
   height: 100%;
-  border:none;
 }
 </style>

@@ -5,9 +5,17 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    menuSelect: '首页'
+    menu: 'select'
   },
-  mutations: {},
-  actions: {},
+  mutations: {
+    changeMenu(state,value){
+      state.menu=value
+    }
+  },
+  actions: {
+    changeMenu(ctx,value){
+      ctx.commit('changeMenu',value)
+    }
+  },
   modules: {}
 });

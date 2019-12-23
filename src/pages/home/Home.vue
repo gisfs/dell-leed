@@ -8,7 +8,7 @@
       <home-aside></home-aside>
     </el-aside>
     <el-container>
-      <el-header height="60px">
+      <el-header height="60px" >
         <home-header  :city="city"></home-header>
       </el-header>
       <el-main>Main</el-main>
@@ -56,26 +56,10 @@ export default {
 </script>
 
 
-<style  lang="scss" >
-.el-header,
-.el-footer {
-  background-color: #ffffff;
+<style  lang="scss" scoped>
+header.el-header{
+  padding:0;
 }
-
-.el-aside {
-  background-color: #d3dce6;
-  color: #333;
-  text-align: left;
-  line-height: 200px;
-}
-
-.el-main {
-  background-color: #e9eef3;
-  color: #333;
-  text-align: center;
-  line-height: 160px;
-}
-  
 </style>
 
 
