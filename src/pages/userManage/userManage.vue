@@ -1,12 +1,12 @@
 <template>
   <div>
-    userManage
+    UserManage
   </div>
 </template>
 
 <script>
 export default {
-  name: 'userManage',
+  name: 'UserManage',
   data () {
     return {
     }

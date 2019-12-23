@@ -1,19 +1,22 @@
 <template>
   <div id="app">
-    <router-view />
+    <main-content></main-content>
   </div>
 </template>
 
 <script>
-
+import MainContent from "@/pages/MainContent";
 export default {
-  name: "app"
+  name: "app",
+  components: {
+    MainContent
+  }
 };
 </script>
 
 <style lang="scss" scoped>
-  #app{
-    height: 100vh;
-    width: 100vw;
-  }
+#app {
+  height: 100vh;
+  width: 100vw;
+}
 </style>

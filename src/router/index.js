@@ -12,26 +12,43 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/',
-    name: 'Main',
-    component: () => import("@/pages/Main.vue"),
-    children: [
-      {
-        path: '/home',
-        name: 'Home',
-        component: () => import("@/pages/home/Home.vue")
-      },
-      {
-        path: '/detail',
-        name: 'Detail',
-        component: () => import("@/pages/detail/Detail.vue")
-      },
-      {
-        path: '/temp',
-        name: 'Temp',
-        component: () => import("@/pages/temp/Temp.vue")
-      }
-    ]
+    name: 'home',
+    component: () => import("@/pages/home/Home.vue")
+  },
+  {
+    path: '/usermanage',
+    name: 'UserManage',
+    component: () => import("@/pages/usermanage/UserManage.vue"),
+  },
+  {
+    path: '/detail',
+    name: 'Detail',
+    component: () => import("@/pages/detail/Detail.vue"),
   }
+
+  // children: [
+  //   {
+  //     path: '/home',
+  //     name: 'Home',
+  //     component: () => import("@/pages/home/Home.vue")
+  //   },
+  //   {
+  //     path: '/detail',
+  //     name: 'Detail',
+  //     component: () => import("@/pages/detail/Detail.vue")
+  //   },
+  //   {
+  //     path: '/temp',
+  //     name: 'Temp',
+  //     component: () => import("@/pages/temp/Temp.vue")
+  //   },
+  //   {
+  //     path: '/usermanage',
+  //     name: 'UserManage',
+  //     component: () => import("@/pages/usermanage/UserManage.vue")
+  //   }
+  // ]
+
 
 
 ];

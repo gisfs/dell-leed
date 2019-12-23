@@ -5,27 +5,29 @@
 
   <el-container style="height: 100%">
     <el-aside width="200px">
-      <home-aside></home-aside>
+      <common-aside></common-aside>
     </el-aside>
     <el-container>
-      <el-header height="60px" >
-        <home-header  :city="city"></home-header>
+      <el-header height="60px">
+        <common-header :city="city"></common-header>
       </el-header>
-      <el-main>Main</el-main>
+      <el-main>
+        <router-view />
+      </el-main>
     </el-container>
   </el-container>
 </template>
 
 <script>
-import HomeHeader from "@/pages/home/HomeHeader";
-import HomeAside from "@/pages/home/HomeAside";
+import CommonHeader from "@/pages/common/CommonHeader";
+import CommonAside from "@/pages/common/CommonAside";
 import axios from "axios";
 
 export default {
-  name: "Main",
+  name: "MainContent",
   components: {
-    HomeHeader,
-    HomeAside
+    CommonHeader,
+    CommonAside
   },
   data() {
     return {
@@ -57,8 +59,8 @@ export default {
 
 
 <style  lang="scss" scoped>
-header.el-header{
-  padding:0;
+header.el-header {
+  padding: 0;
 }
 </style>
 

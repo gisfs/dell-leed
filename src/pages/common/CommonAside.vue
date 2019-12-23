@@ -35,13 +35,13 @@
 
 <script>
 export default {
-  name: "HomeAside",
+  name: "CommonAside",
   data() {
     return {
       asideMenu: [
         {
           path: "/",
-          name: "主页",
+          name: "首页",
           icon: "el-icon-menu"
         },
         {
@@ -61,13 +61,13 @@ export default {
           ]
         },
         {
-          path: "/",
-          name: "导航三",
+          path: "/usermanage",
+          name: "用户管理",
           icon: "el-icon-menu"
         },
         {
-          path: "/",
-          name: "导航四",
+          path: "/detail",
+          name: "详细",
           icon: "el-icon-menu"
         }
       ]
