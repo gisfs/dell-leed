@@ -3,12 +3,6 @@
     <div class="l-content">
       <el-button type="primary" icon="el-icon-menu" size="mini"></el-button>
       <div class="select">{{this.$store.state.menu}}</div>
-      <el-breadcrumb class="bread" separator-class="el-icon-arrow-right">
-        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-        <el-breadcrumb-item>
-          <a href="/">活动管理</a>
-        </el-breadcrumb-item>
-      </el-breadcrumb>
     </div>
     <div class="r-content">
       <el-dropdown trigger="click">

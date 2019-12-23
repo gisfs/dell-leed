@@ -22,7 +22,7 @@ import HomeAside from "@/pages/home/HomeAside";
 import axios from "axios";
 
 export default {
-  name: "Home",
+  name: "Main",
   components: {
     HomeHeader,
     HomeAside

@@ -49,25 +49,25 @@ export default {
           icon: "el-icon-menu",
           child: [
             {
-              path: "/path1",
-              name: "选项1",
+              path: "/temp",
+              name: "temp",
               icon: "el-icon-menu"
             },
             {
-              path: "/path2",
-              name: "选项2",
+              path: "/detail",
+              name: "detail",
               icon: "el-icon-menu"
             }
           ]
         },
         {
-          path: "/testvue",
-          name: "testvue",
+          path: "/",
+          name: "导航三",
           icon: "el-icon-menu"
         },
         {
-          path: "/detail",
-          name: "detail",
+          path: "/",
+          name: "导航四",
           icon: "el-icon-menu"
         }
       ]

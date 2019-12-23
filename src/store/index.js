@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    menu: 'select'
+    menu: '首页'
   },
   mutations: {
     changeMenu(state,value){
