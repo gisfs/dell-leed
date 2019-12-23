@@ -40,34 +40,34 @@ export default {
     return {
       asideMenu: [
         {
-          name: "导航一",
+          path: "/",
+          name: "主页",
+          icon: "el-icon-menu"
+        },
+        {
+          name: "导航二",
           icon: "el-icon-menu",
           child: [
             {
-              path: "/subPath1",
+              path: "/path1",
               name: "选项1",
               icon: "el-icon-menu"
             },
             {
-              path: "/subPath2",
+              path: "/path2",
               name: "选项2",
               icon: "el-icon-menu"
             }
           ]
         },
         {
-          path: "/path2",
-          name: "导航二",
+          path: "/testvue",
+          name: "testvue",
           icon: "el-icon-menu"
         },
         {
-          path: "/path3",
-          name: "导航三",
-          icon: "el-icon-menu"
-        },
-        {
-          path: "/path4",
-          name: "导航四",
+          path: "/detail",
+          name: "detail",
           icon: "el-icon-menu"
         }
       ]
@@ -75,13 +75,14 @@ export default {
   },
   methods: {
     handleOpen(key, keyPath) {
-      console.log(key, keyPath);
+      // console.log(key, keyPath);
     },
     handleClose(key, keyPath) {
-      console.log(key, keyPath);
     },
     clickMenu(item) {
       this.$store.commit("changeMenu", item.name);
+      console.log(item.path,item.name)
+      this.$router.push(item.path)
 
       // this.$store.dispatch('changeMenu',name)//异步
       // this.$store.commit("changeMenu", name); //同步

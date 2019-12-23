@@ -57,7 +57,7 @@ export default {
   color: #409eff;
 }
 .select{
-  margin-left:0px;
+  margin-left:20px;
 }
 .l-content {
   // width: 400px;
