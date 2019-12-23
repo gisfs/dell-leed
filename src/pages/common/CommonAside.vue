@@ -54,8 +54,8 @@ export default {
               icon: "el-icon-menu"
             },
             {
-              path: "/detail",
-              name: "detail",
+              path: "/temp",
+              name: "temp",
               icon: "el-icon-menu"
             }
           ]
