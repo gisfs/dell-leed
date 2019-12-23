@@ -2,12 +2,14 @@
   <div class="content">
     <div class="l-content">
       <el-button type="primary" icon="el-icon-menu" size="mini"></el-button>
-      <el-breadcrumb class="bread" separator-class="el-icon-arrow-right" >
+      <div class="select">{{this.$store.state.menuSelect}}</div>
+      <el-breadcrumb class="bread" separator-class="el-icon-arrow-right">
         <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-        <el-breadcrumb-item ><a href="/">活动管理</a></el-breadcrumb-item>
+        <el-breadcrumb-item>
+          <a href="/">活动管理</a>
+        </el-breadcrumb-item>
       </el-breadcrumb>
     </div>
-
     <div class="r-content">
       <el-dropdown trigger="click">
         <span class="el-dropdown-link">
@@ -54,6 +56,9 @@ export default {
   cursor: pointer;
   color: #409eff;
 }
+.select{
+  margin-left:20px;
+}
 .l-content {
   // width: 400px;
   display: flex;
@@ -67,7 +72,7 @@ export default {
     border-radius: 50%;
   }
 }
-.bread{
-  margin-left: 20px;
+.bread {
+  margin-left: 100px;
 }
 </style>

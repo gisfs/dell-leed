@@ -60,7 +60,6 @@ export default {
 .el-header,
 .el-footer {
   background-color: #ffffff;
-  text-align: left;
 }
 
 .el-aside {
@@ -76,19 +75,7 @@ export default {
   text-align: center;
   line-height: 160px;
 }
-
-body > .el-container {
-  margin-bottom: 40px;
-}
-
-.el-container:nth-child(5) .el-aside,
-.el-container:nth-child(6) .el-aside {
-  line-height: 260px;
-}
-
-.el-container:nth-child(7) .el-aside {
-  line-height: 320px;
-}
+  
 </style>
 
 
