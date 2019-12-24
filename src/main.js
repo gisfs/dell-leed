@@ -6,6 +6,7 @@ import Element from "element-ui"
 import axios from 'axios'
 import 'element-ui/lib/theme-chalk/index.css';
 import './assets/scss/reset.scss'
+import './mock/index.js'
 
 Vue.config.productionTip = false;
 Vue.use(Element);

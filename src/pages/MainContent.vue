@@ -22,8 +22,6 @@
 import CommonHeader from "@/pages/common/CommonHeader";
 import CommonAside from "@/pages/common/CommonAside";
 
-// import api from '@/mock/api.js'
-
 export default {
   name: "MainContent",
   components: {
@@ -40,13 +38,8 @@ export default {
       console.log("element test");
     },
     getHomeInfo() {
-     // console.log(api.url.interface1)
-       this.axios.get("/api/index.json").then(this.getHomeInfoSucc);
-      // axios.get('http://20181024Mock.com/model1/interface1').then(this.getScuc);
-    },
-    getScuc(res) {
-      res = res.data;
-      console.log(res);
+      // this.axios.get("/api/index.json").then(this.getHomeInfoSucc);
+       this.axios.get('http://20181024Mock.com/model1/interface2').then(this.getHomeInfoSucc);
     },
     getHomeInfoSucc(res) {
       res = res.data;
