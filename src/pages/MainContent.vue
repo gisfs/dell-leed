@@ -38,17 +38,17 @@ export default {
       console.log("element test");
     },
     getHomeInfo() {
-      // this.axios.get("/api/index.json").then(this.getHomeInfoSucc);
-       this.axios.get('http://20181024Mock.com/model1/interface2').then(this.getHomeInfoSucc);
-    },
-    getHomeInfoSucc(res) {
-      res = res.data;
-      if (res.ret && res.data) {
-        const data = res.data;
-        this.city = data.city;
-      }
-
-      console.log(res);
+      // this.axios.get("/api/index.json").then(res => {
+      //   console.log(res);
+      // });
+      this.axios.get("http://20181024Mock.com/model1/interface2").then(res => {
+        res = res.data;
+        if (res.ret && res.data) {
+          const data = res.data;
+          this.city = data.city;
+        }
+        console.log(res);
+      })
     }
   },
   mounted() {
