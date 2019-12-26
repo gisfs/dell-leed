@@ -41,31 +41,30 @@ export default {
 <style lang="scss" scoped>
 .content {
   display: flex;
-  height: 100%;
-  align-items: center;
   justify-content: space-between;
   background-color: #ffffff;
+  .l-content {
+    display: flex;
+    width: 150px;
+    align-items: center;
+    .select{
+      margin-left:20px;
+    }
+  }
+  .r-content {
+    .userImage {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+  }
 }
 .el-dropdown-link {
   cursor: pointer;
   color: #409eff;
 }
-.select{
-  margin-left:20px;
-}
-.l-content {
-  // width: 400px;
-  display: flex;
-  align-items: center;
-  // justify-content: space-between;
-}
-.r-content {
-  .userImage {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-  }
-}
+
+
 .bread {
   margin-left: 100px;
 }
